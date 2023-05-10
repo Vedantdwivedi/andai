@@ -1,0 +1,68 @@
+version: "3.1"
+
+stories:
+
+- story: hr 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: business_function
+  - action: utter_ask_department
+  - intent: give_department 
+    entities:
+    - department_selected: HR
+  - slot_was_set:
+    - department_selected: HR  
+  #- action: utter_selected_department
+  - action: utter_ask_question_HR 
+  - intent: salary
+  - action: utter_salary 
+
+- story: hr 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: business_function
+  - action: utter_ask_department
+  - intent: give_department 
+    entities:
+    - department_selected: HR
+  - slot_was_set:
+    - department_selected: HR  
+  #- action: utter_selected_department
+  - action: utter_ask_question_HR 
+  - intent: leave_policy
+  - action: utter_leave_policy
+
+- story: marketing 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: business_function
+  - action: utter_ask_department
+  - intent: give_department 
+    entities:
+    - department_selected: Marketing
+  - slot_was_set:
+    - department_selected: Marketing  
+  #- action: utter_selected_department
+  - action: utter_ask_question_Marketing 
+  - intent: Marketing_response1
+  - action: utter_products
+
+- story: marketing 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: business_function
+  - action: utter_ask_department
+  - intent: give_department 
+    entities:
+    - department_selected: Marketing
+  - slot_was_set:
+    - department_selected: Marketing  
+  #- action: utter_selected_department
+  - action: utter_ask_question_Marketing 
+  - intent: Marketing_response2
+  - action: utter_countries
+      

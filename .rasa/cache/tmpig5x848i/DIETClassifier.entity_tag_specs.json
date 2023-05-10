@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-department_selected",
+      "2": "I-department_selected",
+      "3": "L-department_selected",
+      "4": "U-department_selected",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-department_selected": 1,
+      "I-department_selected": 2,
+      "L-department_selected": 3,
+      "U-department_selected": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

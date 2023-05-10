@@ -1,0 +1,143 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: business_function
+  examples: |
+    - I want a chatbot
+    - I want an assistant
+    - I want to know which chatbot can we prepare
+
+- intent: give_department
+  examples: |
+    - I want a chatbot for [HR](department_selected)
+    - I want an assistant for [Marketing] (department_selected)
+    - [Marketing] (department_selected)
+    - [HR] (department_selected)
+    - I want it for [HR] (department_selected)
+    - give it for [Marketing] (department_selected)
+    - [Marketing](department_selected) i need
+    - [HR](department_selected) should be selected
+
+- intent: leave_policy
+  examples: |
+    - What is the leave policy?
+    - How many vacation days do I get?
+    - Can you tell me about the leave policy?
+    - What are the rules around taking time off?
+    - I want to know about the leave policy
+
+- intent: salary
+  examples: |
+    - How much will I get paid?
+    - What's my salary?
+    - Can you tell me about the salary package?
+    - What benefits do I get with my salary?
+    - I want to know about the salary structure?
+    - I want to know about the salary
+    - Salary structure
+
+- intent: Marketing_response1
+  examples: |
+    - I want to know about Different products that we serve
+    - Products
+    - I want to know about the SKUs that we serve
+    - Different goods
+    - I want to know about the different skus that we serve
+    - SKUs
+- intent: Marketing_response2
+  examples: |
+    - What are the different countries that we serve
+    - Regions that we serve
+    - I want to know about the area covered by our business
+    - I want to know about the spread of our business
+    
+

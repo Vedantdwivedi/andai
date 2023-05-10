@@ -1,0 +1,78 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - give_department
+  - business_function
+  - leave_policy
+  - salary
+  - Marketing_response1
+  - Marketing_response2
+entities:
+  - department_selected
+slots:
+  department_selected:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: department_selected
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  utter_ask_department:
+  - text: "Please provide the department from Marketing and HR"
+  utter_selected_department:
+  - text: "Thanks, I will remember that"
+  utter_ask_question_HR:
+  - text: "What do you want to know about HR"
+    buttons:
+      - title: "Leave Policies"
+        payload: "/leave_policy"
+      - title: "Salary Policies"
+        payload: "/salary"  
+  utter_leave_policy:
+  - text: "Our leave policy is that employees get 15 days of paid time off per year, which increases to 20 days after 5 years of service."
+  utter_salary:
+  - text: "We follow a structured salary system based on employee roles and experience. You can check with your HR representative for more details."
+  utter_ask_question_Marketing:
+  - text: "What do you want to know about marketing"
+    buttons:
+      - title: "Different products"
+        payload: "/Marketing_response1"
+      - title: "Different countries that we serve"
+        payload: "/Marketing_response2"  
+  utter_products:
+  - text: "We serve different type of products ranging from small 5 ml Bottles to 1 Litre Bottles in different categories like pharma, cosmetics, Liquor and nail polish."
+  utter_countries:
+  - text: "We have covered a vast region of the world. We mostly serve all the countries of Europe, USA, Asia and Africa."        
+actions:
+- action_say_department
+- utter_ask_department
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
